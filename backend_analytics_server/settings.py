@@ -16,8 +16,8 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-API_URL = "https://jsonplaceholder.typicode.com/posts"
-# API_URL = "https://landing-7e76b-default-rtdb.firebaseio.com/"
+# API_URL = "https://jsonplaceholder.typicode.com/posts"
+API_URL = "https://jruano.pythonanywhere.com/landing/api/index/"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -28,7 +28,15 @@ SECRET_KEY = "django-insecure-6@ms_*(0yp$yj%c4q&mc)n+)oh4^(83for929^j2rr*l)36@4f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+CSRF_TRUSTED_ORIGINS = [
+  "https://*.app.github.dev", # Solo si utiliza Codespaces
+  "https://localhost:8000",
+  "http://127.0.0.1:8000"
+]
+
+ALLOWED_HOSTS = [
+    "*",
+]
 
 
 # Application definition
