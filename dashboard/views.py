@@ -31,7 +31,7 @@ def get_most_common_product(product_counts):
     return most_common_product, highest_count
 
 
-#@login_required
+@login_required
 def index(request):
     start_time = time.time()
     response = requests.get(settings.API_URL)
